@@ -12,16 +12,42 @@ const Contact = () => {
         </div>
 
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                       <form action="https://api.web3forms.com/submit" method="POST">
-  {/* ही महत्त्वाची लाईन खाली टाक: */}
+              <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-4">
+  
+  {/* Access Key */}
   <input type="hidden" name="access_key" value="ec7d64aa-1e41-4551-adb8-61499d6c4d0f" />
 
-  {/* खाली तुझे आधीचे इनपुट फील्ड्स तसेच राहू दे, पण त्यांना 'name' अ‍ॅट्रिब्यूट नक्की दे: */}
-  <input type="text" name="name" required placeholder="Your Name" />
-  <input type="email" name="email" required placeholder="Your Email" />
-  <textarea name="message" required placeholder="Your Message"></textarea>
+  {/* इनपुट बॉक्स (इथे तुझे जुने className किंवा स्टाईल्स परत वापर) */}
+  <input 
+    type="text" 
+    name="name" 
+    required 
+    placeholder="Your Name" 
+    className="w-full p-3 border border-gray-300 rounded-lg" 
+  />
+
+  <input 
+    type="email" 
+    name="email" 
+    required 
+    placeholder="Your Email" 
+    className="w-full p-3 border border-gray-300 rounded-lg" 
+  />
+
+  <textarea 
+    name="message" 
+    required 
+    placeholder="Your Message" 
+    className="w-full p-3 border border-gray-300 rounded-lg"
+  ></textarea>
   
-  <button type="submit">Send Message</button>
+  {/* बटण */}
+  <button 
+    type="submit" 
+    className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
+  >
+    Send Message
+  </button>
 </form>
         </div>
 
