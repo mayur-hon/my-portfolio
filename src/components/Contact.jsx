@@ -12,25 +12,17 @@ const Contact = () => {
         </div>
 
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="John Doe" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
-                <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="john@example.com" />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea rows="5" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="How can I help you?"></textarea>
-            </div>
-            <button type="button" className="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300 shadow-md">
-              Send Message
-            </button>
-          </form>
+                       <form action="https://api.web3forms.com/submit" method="POST">
+  {/* ही महत्त्वाची लाईन खाली टाक: */}
+  <input type="hidden" name="access_key" value="ec7d64aa-1e41-4551-adb8-61499d6c4d0f" />
+
+  {/* खाली तुझे आधीचे इनपुट फील्ड्स तसेच राहू दे, पण त्यांना 'name' अ‍ॅट्रिब्यूट नक्की दे: */}
+  <input type="text" name="name" required placeholder="Your Name" />
+  <input type="email" name="email" required placeholder="Your Email" />
+  <textarea name="message" required placeholder="Your Message"></textarea>
+  
+  <button type="submit">Send Message</button>
+</form>
         </div>
 
       </div>
