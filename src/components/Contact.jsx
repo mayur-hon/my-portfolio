@@ -42,9 +42,9 @@ const Contact = () => {
   ></textarea>
   
   {/* बटण */}
-  <button 
+ <button 
   type="submit" 
-  className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer"
+  className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer pointer-events-auto"
 >
   Send Message
 </button>
