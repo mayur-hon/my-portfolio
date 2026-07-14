@@ -34,7 +34,7 @@ const Contact = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold">Get in touch</h3>
             <p className="text-gray-600">I am open to new opportunities.</p>
-            <p className="font-bold">📧 mayurhon008@gmail.com</p>
+            <p className="font-bold">📧 mayurhon08@gmail.com</p>
           </div>
           <form ref={formRef} onSubmit={onSubmit} className="space-y-4">
             <input name="name" required placeholder="Your Name" className="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-600 outline-none" />
