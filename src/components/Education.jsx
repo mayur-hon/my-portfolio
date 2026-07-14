@@ -17,7 +17,7 @@ const Education = () => {
     {
       degree: "Secondary School (SSC)",
       college: "Your School Name",
-      percentage: "90%",
+      percentage: "70.60%",
       year: "2019 - 2020"
     }
   ];

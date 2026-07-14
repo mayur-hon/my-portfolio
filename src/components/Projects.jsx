@@ -4,7 +4,7 @@ const Projects = () => {
   // इथे तुझा प्रोजेक्ट्सचा डेटा व्यवस्थित डिफाइन केला आहे
   const projects = [
     {
-      title: "Car Rental System Hub Himachal",
+      title: "Car Rental System Hub",
       description: "A full-stack application for managing car rentals with real-time availability tracking.",
       tech: ["Java", "Spring Boot", "MySQL"]
     },
