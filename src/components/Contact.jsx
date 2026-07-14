@@ -43,11 +43,11 @@ const Contact = () => {
   
   {/* बटण */}
   <button 
-    type="submit" 
-    className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
-  >
-    Send Message
-  </button>
+  type="submit" 
+  className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer"
+>
+  Send Message
+</button>
 </form>
         </div>
 
