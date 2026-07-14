@@ -12,3 +12,5 @@
     </div>
   ))}
 </div>
+// Projects.jsx च्या शेवटी हे नक्की आहे ना ते चेक कर:
+export default Projects;

@@ -1,3 +1,5 @@
+// App.jsx मध्ये हे असं असायला हवं:
+import Projects from './components/Projects';
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
