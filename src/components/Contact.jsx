@@ -1,13 +1,14 @@
-import { useRef } from 'react'; // हे सर्वात वर ऍड कर
+import React, { useRef } from 'react';
 
 const Contact = () => {
-  const formRef = useRef(null); // फॉर्मला रेफरेन्स देण्यासाठी
+  const formRef = useRef(null);
 
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    // सबमिशन कोड...
+    formData.append("access_key", "ec7d64aa-1e41-4551-adb8-61499d6c4d0f");
+
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
@@ -16,8 +17,8 @@ const Contact = () => {
     const data = await response.json();
 
     if (data.success) {
-      alert("मेसेज यशस्वीरित्या पाठवला गेला आहे!"); // मेसेज गेल्याची खात्री
-      formRef.current.reset(); // हे कमांड फॉर्ममधला डेटा पुसून टाकेल
+      alert("मेसेज यशस्वीरित्या पाठवला गेला आहे!");
+      formRef.current.reset();
     } else {
       alert("काहीतरी चूक झाली, पुन्हा प्रयत्न करा.");
     }
@@ -25,8 +26,6 @@ const Contact = () => {
 
   return (
     <form ref={formRef} onSubmit={onSubmit} className="flex flex-col gap-4">
-      <input type="hidden" name="access_key" value="ec7d64aa-1e41-4551-adb8-61499d6c4d0f" />
-      
       <input type="text" name="name" required placeholder="Your Name" className="w-full p-3 border border-gray-300 rounded-lg" />
       <input type="email" name="email" required placeholder="Your Email" className="w-full p-3 border border-gray-300 rounded-lg" />
       <textarea name="message" required placeholder="Your Message" className="w-full p-3 border border-gray-300 rounded-lg"></textarea>
