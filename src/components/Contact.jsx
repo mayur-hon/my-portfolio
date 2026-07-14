@@ -1,4 +1,20 @@
-  const data = await response.json();
+import React, { useRef } from 'react';
+
+const Contact = () => {
+  const formRef = useRef(null);
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "ec7d64aa-1e41-4551-adb8-61499d6c4d0f");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
 
     if (data.success) {
       alert("Message sent successfully!");
