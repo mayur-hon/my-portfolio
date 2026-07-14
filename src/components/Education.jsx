@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Education = () => {import React from 'react';
-
 const Education = () => {
   const educationData = [
     {
@@ -18,9 +16,9 @@ const Education = () => {
     },
     {
       degree: "Secondary School (SSC)",
-      college: "New English School Shiregaon",
-      percentage: "70.60%",
-      year: "2018 - 2019"
+      college: "Your School Name",
+      percentage: "90%",
+      year: "2019 - 2020"
     }
   ];
 
@@ -50,4 +48,3 @@ const Education = () => {
 };
 
 export default Education;
-      
