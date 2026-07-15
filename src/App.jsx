@@ -10,15 +10,17 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen font-sans">
+    <div className="bg-gray-50 min-h-screen font-sans overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div className="animate-fade-in">
+        <Hero />
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
